@@ -38,10 +38,8 @@ struct GroupSessionView: View {
                     .padding(.top, 20)
 
                 VStack(spacing: 20) {
-                    Button(action: {
-                        print("Log in into group session tapped")
-                    }) {
-                        Text("Log in into session")
+                    NavigationLink(destination: LoginGroupSessionView()) {
+                        Text("Login into session")
                             .font(.headline)
                             .foregroundColor(.white)
                             .padding()
@@ -51,9 +49,7 @@ struct GroupSessionView: View {
                             .padding(.horizontal, 40)
                     }
 
-                    Button(action: {
-                        print("Create group session tapped")
-                    }) {
+                    NavigationLink(destination: CreateGroupSessionView()) {
                         Text("Create Session")
                             .font(.headline)
                             .foregroundColor(.white)
