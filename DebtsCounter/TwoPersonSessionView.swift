@@ -39,9 +39,7 @@ struct TwoPersonSessionView: View {
                     .padding(.top, 20)
 
                 VStack(spacing: 20) {
-                    Button(action: {
-                        print("Log in into 2-person session tapped")
-                    }) {
+                    NavigationLink(destination: LoginTwoPersonSessionView()) {
                         Text("Log in into session")
                             .font(.headline)
                             .foregroundColor(.white)
@@ -52,9 +50,7 @@ struct TwoPersonSessionView: View {
                             .padding(.horizontal, 40)
                     }
 
-                    Button(action: {
-                        print("Create 2-person session tapped")
-                    }) {
+                    NavigationLink(destination: CreateTwoPersonSessionView()) {
                         Text("Create Session")
                             .font(.headline)
                             .foregroundColor(.white)
