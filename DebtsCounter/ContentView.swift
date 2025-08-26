@@ -5,7 +5,10 @@ struct WelcomeView: View {
         NavigationStack {
             ZStack {
                 LinearGradient(
-                    gradient: Gradient(colors: [Color.blue, Color.purple]),
+                    gradient: Gradient(colors: [
+                        Color(red: 255/255, green: 255/255, blue: 255/255, opacity: 1.0),
+                        Color(red: 1/255, green: 114/255, blue: 114/255, opacity: 1.0)
+                        ]),
                     startPoint: .top,
                     endPoint: .bottom
                 )
@@ -79,3 +82,5 @@ struct WelcomeView_Previews: PreviewProvider {
         WelcomeView()
     }
 }
+
+

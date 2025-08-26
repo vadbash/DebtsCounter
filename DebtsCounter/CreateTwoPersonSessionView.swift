@@ -6,19 +6,22 @@ struct CreateTwoPersonSessionView: View {
     var body: some View {
         ZStack(alignment: .topLeading) {
             LinearGradient(
-                gradient: Gradient(colors: [Color.blue, Color.purple]),
+                gradient: Gradient(colors: [
+                    Color(red: 255/255, green: 255/255, blue: 255/255, opacity: 1.0),
+                    Color(red: 1/255, green: 114/255, blue: 114/255, opacity: 1.0)
+                    ]),
                 startPoint: .top,
                 endPoint: .bottom
             )
             .ignoresSafeArea()
             
-            Button(action: {
-                dismiss()}) {
-                Image(systemName: "chevron.left")
-                    .foregroundColor(.white)
-                    .font(.system(size: 24, weight: .bold))
-                    .padding(.leading, 36)
-                    .padding(0)}
+//            Button(action: {
+//                dismiss()}) {
+//                Image(systemName: "chevron.left")
+//                    .foregroundColor(.white)
+//                    .font(.system(size: 24, weight: .bold))
+//                    .padding(.leading, 36)
+//                    .padding(0)}
 
             VStack(spacing: 40) {
                 Image("logo")

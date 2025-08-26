@@ -6,41 +6,44 @@ struct TwoPersonSessionView: View {
     var body: some View {
         ZStack(alignment: .topLeading) {
             LinearGradient(
-                gradient: Gradient(colors: [Color.blue, Color.purple]),
+                gradient: Gradient(colors: [
+                    Color(red: 255/255, green: 255/255, blue: 255/255, opacity: 1.0),
+                    Color(red: 1/255, green: 114/255, blue: 114/255, opacity: 1.0)
+                ]),
                 startPoint: .top,
                 endPoint: .bottom
             )
             .ignoresSafeArea()
             
-            Button(action: {
-                dismiss()}) {
-                Image(systemName: "chevron.left")
-                    .foregroundColor(.white)
-                    .font(.system(size: 24, weight: .bold))
-                    .padding(.leading, 36)
-                    .padding(0)}
-
+            // Button(action: {
+            //     dismiss()}) {
+            //     Image(systemName: "chevron.left")
+            //         .foregroundColor(.gray)
+            //         .font(.system(size: 24, weight: .bold))
+            //         .padding(.leading, 36)
+            //         .padding(0)}
+            
             VStack(spacing: 40) {
                 Image("logo")
                     .resizable()
                     .frame(width: 80, height: 80)
                     .clipShape(Circle())
                     .shadow(radius: 20)
-
+                
                 Text("DebtsCounter")
                     .font(.title)
                     .fontWeight(.bold)
                     .foregroundColor(.white)
                     .padding(.bottom, 40)
-
+                
                 Text("2 PEOPLE SESSION")
                     .font(.title2)
                     .foregroundColor(.white)
                     .padding(.top, 20)
-
+                
                 VStack(spacing: 20) {
                     NavigationLink(destination: LoginTwoPersonSessionView()) {
-                        Text("Log in into session")
+                        Text("Login to session")
                             .font(.headline)
                             .foregroundColor(.white)
                             .padding()
@@ -61,9 +64,9 @@ struct TwoPersonSessionView: View {
                             .padding(.horizontal, 40)
                     }
                 }
-
+                
                 Spacer()
-
+                
                 Text("© vadbash")
                     .foregroundColor(.white.opacity(0.7))
                     .font(.footnote)
@@ -71,6 +74,6 @@ struct TwoPersonSessionView: View {
             }
             .padding(0)
         }
-        .navigationBarBackButtonHidden(false)
+        .navigationBarBackButtonHidden(true)
     }
 }
