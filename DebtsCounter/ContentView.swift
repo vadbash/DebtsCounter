@@ -69,6 +69,7 @@ struct WelcomeView: View {
                 }
                 .padding(.top, 100)
             }
+            
         }
     }
 }

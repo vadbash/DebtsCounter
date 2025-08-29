@@ -15,13 +15,13 @@ struct CreateTwoPersonSessionView: View {
             )
             .ignoresSafeArea()
             
-//            Button(action: {
-//                dismiss()}) {
-//                Image(systemName: "chevron.left")
-//                    .foregroundColor(.white)
-//                    .font(.system(size: 24, weight: .bold))
-//                    .padding(.leading, 36)
-//                    .padding(0)}
+            Button(action: {
+                dismiss()}) {
+                Image(systemName: "chevron.left")
+                    .foregroundColor(.gray)
+                    .font(.system(size: 24, weight: .bold))
+                    .padding(.leading, 36)
+                    .padding(0)}
 
             VStack(spacing: 40) {
                 Image("logo")
@@ -29,6 +29,7 @@ struct CreateTwoPersonSessionView: View {
                     .frame(width: 80, height: 80)
                     .clipShape(Circle())
                     .shadow(radius: 20)
+                    .padding(.top, 60)
 
                 Text("DebtsCounter")
                     .font(.title)
@@ -78,7 +79,7 @@ struct CreateTwoPersonSessionView: View {
             }
             .padding(0)
         }
-        .navigationBarBackButtonHidden(false)
+        .navigationBarBackButtonHidden(true)
     }
 }
 
