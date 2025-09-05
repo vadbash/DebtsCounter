@@ -21,8 +21,8 @@ struct WelcomeView: View {
                         .clipShape(Circle())
                         .shadow(radius: 10)
 
-                    Text("DebtsCounter")
-                        .font(.largeTitle)
+                    Text("LogOwe")
+                        .font(.custom("Montserrat", size: 32))
                         .fontWeight(.bold)
                         .foregroundColor(.white)
 

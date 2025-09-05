@@ -31,8 +31,8 @@ struct CreateGroupSessionView: View {
                     .shadow(radius: 20)
                     .padding(.top, 60)
 
-                Text("DebtsCounter")
-                    .font(.title)
+                Text("LogOwe")
+                    .font(.custom("Montserrat", size: 26))
                     .fontWeight(.bold)
                     .foregroundColor(.white)
                     .padding(.bottom, 40)
